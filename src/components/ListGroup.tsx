@@ -4,13 +4,13 @@ interface Props
 {
   items: string[];
   heading: string;
+  onSelectItem: (itme:string) => void;
 }
 
-function ListGroup ({items , heading}: Props)
+function ListGroup ({items , heading , onSelectItem}: Props)
 {
     const [selectedIndex , setSelectedIndex] = useState(-1);
 
-    const handleClick = (event : MouseEvent) => console.log(event);
     return ( 
   <>
       <div className="container w-75">
@@ -29,7 +29,13 @@ function ListGroup ({items , heading}: Props)
        items.map((item , index) => (
        <li key={index} 
        className={ selectedIndex === index ? "list-group-item active" : "list-group-item"}
-       onClick={() =>setSelectedIndex(index)}
+       onClick={
+        () => {
+          setSelectedIndex(index);
+          onSelectItem(item);
+        }
+      
+      }
        >{item}</li>
        ))
        }

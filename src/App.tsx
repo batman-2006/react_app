@@ -1,25 +1,12 @@
-import ListGroup from './components/ListGroup';
+import Alert from "./components/Alert";
 
 function app ()
 {
-  let cities = 
-    [
-        'New York',
-        'Port Said',
-        'Texas',
-    ];
-
-    let Countries = 
-    [
-        'Egypt',
-        'England',
-        'USA',
-    ];
 
   return (<div>
-    <ListGroup items={cities} heading='Cities' />
-    <br />
-    <ListGroup items={Countries} heading='Countries' />
+    <Alert>
+      Hi World From <b>React Alert !</b>
+      </Alert>
 
     </div> );
 }
