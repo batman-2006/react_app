@@ -1,21 +1,23 @@
-import Alert from "./components/Alert";
-import MyButton from "./components/Button";
-import ListGroup from "./components/ListGroup/";
-import LikeButton from "./Like";
-import { AiFillAppstore } from "react-icons/ai"
-import { useState } from "react";
 
-const items = [
-  'New York',
-  'Port Said',
-  'Port Fouad'
-];
+import { useState } from "react";
+import IncButton from "./components/IncButton"
+
 function app ()
 {
-
-  return (<div>
-     <LikeButton onClick={() => console.log("Clicked")} />
-    </div> );
+  const [Product , setProduct] = useState({
+   title: "T-shirt",
+   price: 1,
+  });
+  const handleClick = () => {
+    const newPrice = Product.price + 1;
+     setProduct({...Product , price: newPrice})
+  }
+return (<div>
+  <h1>{Product.price}</h1>
+  <br></br>
+  <IncButton onClick={handleClick}  styling="btn btn-primary">Click To Increment</IncButton>
+</div>
+);
 }
 
 export default app;
