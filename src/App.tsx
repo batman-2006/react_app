@@ -14,7 +14,6 @@ function app ()
 return (<div>
   <h1>{Product.price}</h1>
   <br></br>
-  <IncButton onClick={handleClick}  styling="btn btn-primary">Click To Increment</IncButton>
 </div>
 );
 }
