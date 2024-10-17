@@ -7,12 +7,9 @@ function app ()
    title: "T-shirt",
    price: 1,
   });
-  const handleClick = () => {
-    const newPrice = Product.price + 1;
-     setProduct({...Product , price: newPrice})
-  }
+
 return (<div>
-  <h1>{Product.price}</h1>
+  <h1>Hello React From Azure !</h1>
   <br></br>
 </div>
 );
