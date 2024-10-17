@@ -1,6 +1,5 @@
 
 import { useState } from "react";
-import IncButton from "./components/IncButton"
 
 function app ()
 {
